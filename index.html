@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Remal</title>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <img src="remal_logo.png" alt="Remal Logo">
+        </div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#our-team">Our Team</a></li>
+        </ul>
+    </nav>
+
+    <div class="slider-container">
+        <div class="slider">
+            <img src="aset/image/welcome.png" alt="Slide 1">
+            <img src="aset/image/soon1.png" alt="Slide 2">
+            <img src="aset/image/soon2.png" alt="Slide 3">
+            <!-- Add more images as needed -->
+        </div>
+    </div>
+
+    <section id="home">
+        <h2>Welcome to Remal</h2>
+        <p>Explore the path of peace and wisdom.</p>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Learn more about our mission and values.</p>
+    </section>
+
+    <section id="events" class="events-list">
+        <h2>Upcoming Events</h2>
+        <ul>
+            <li>
+                <img src="event1.jpg" alt="Event 1">
+                <div class="event-details">
+                    <h3>Event 1</h3>
+                    <p>Date: DD/MM/YYYY</p>
+                    <p>Description of the event. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </li>
+            <li>
+                <img src="event2.jpg" alt="Event 2">
+                <div class="event-details">
+                    <h3>Event 2</h3>
+                    <p>Date: DD/MM/YYYY</p>
+                    <p>Description of the event. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </li>
+            <!-- Add more events as needed -->
+        </ul>
+    </section>
+
+    <section id="our-team">
+        <h2>Our Team</h2>
+        <div class="team-member" onmouseover="addHoverEffect(this)" onmouseout="removeHoverEffect(this)">
+            <img src="team_member1.jpg" alt="Team Member 1">
+            <div class="member-details">
+                <h3>John Doe</h3>
+                <p>Position: Developer</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+        <!-- Add more team members as needed -->
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Remal. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
