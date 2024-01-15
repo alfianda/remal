@@ -1,5 +1,7 @@
 // Tambahkan script JavaScript untuk membuat slider
 const slider = document.querySelector('.slider');
+const prevButton = document.getElementById('prevButton'); // Add a button with id 'prevButton' for manual navigation
+const nextButton = document.getElementById('nextButton'); // Add a button with id 'nextButton' for manual navigation
 let isSliding = false;
 
 function slideNext() {
@@ -10,19 +12,27 @@ function slideNext() {
             slider.appendChild(slider.firstElementChild);
             slider.style.transform = 'translateX(0)';
             isSliding = false;
-        }, 500);
+        }, 800);
     }
 }
 
-setInterval(slideNext, 3000); // Ganti gambar setiap 3 detik (sesuaikan dengan kebutuhan)
-
-// Tambahkan fungsi untuk efek hover pada kartu anggota
-function addHoverEffect(element) {
-    element.classList.add('hover-effect');
+function slidePrev() {
+    if (!isSliding) {
+        isSliding = true;
+        slider.style.transform = 'translateX(100%)';
+        slider.insertBefore(slider.lastElementChild, slider.firstElementChild);
+        setTimeout(() => {
+            slider.style.transform = 'translateX(0)';
+            isSliding = false;
+        }, 800);
+    }
 }
 
-function removeHoverEffect(element) {
-    element.classList.remove('hover-effect');
-}
+setInterval(slideNext, 3000); // Automatic sliding every 3 seconds (as before)
 
-// ... (kode sebelumnya)
+// Optional: Add event listeners for manual navigation
+if (prevButton && nextButton) {
+    prevButton.addEventListener('click', slidePrev);
+    nextButton.addEventListener('click', slideNext);
+}
+</script>
