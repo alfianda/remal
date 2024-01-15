@@ -1,3 +1,5 @@
+/* Updated Slider Styles */
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -7,17 +9,40 @@ body {
 .slider-container {
     position: relative;
     overflow: hidden;
-    height: 100vh;
+    height: 60vh; /* Adjusted height to 60% of the viewport height */
 }
 
 .slider {
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.8s ease-in-out; /* Slower transition for a smoother effect */
 }
 
 .slider img {
-    width: 1200px;
-    height: 100vh;
+    width: 100%; /* Make the images fill the slider container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Maintain image proportions and cover the container */
+}
+
+/* Additional Styling for Slider Navigation (optional) */
+.nav-arrows {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.nav-arrows button {
+    background: transparent;
+    border: none;
+    font-size: 1.5em;
+    color: #333;
+    cursor: pointer;
+}
+
+.nav-arrows button:hover {
+    color: #ff5733;
 }
 
 nav {
@@ -208,3 +233,5 @@ footer {
 .hover-effect {
     transform: scale(1.1);
 }
+
+</style>
